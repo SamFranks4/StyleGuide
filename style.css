@@ -1,91 +1,79 @@
-/* General Reset */
+/* === General Reset === */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', serif;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Body */
+/* === Body === */
 body {
     display: flex;
     min-height: 100vh;
-    background-color: #f5f5dc; /* Beige */
+    background: #f5f5dc; /* Beige */
     color: #001f3f; /* Navy text */
-    transition: background 0.3s, color 0.3s;
 }
 
-/* Header */
+/* === Header === */
 header {
-    background-color: #001f3f; /* Dark navy */
-    color: #f5f5dc; /* Beige text */
-    height: 10vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Caveat', cursive;
-    font-size: 2em;
-    border-bottom: 2px solid #f5f5dc; /* Beige outline */
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 60px;
+    background: #4F000B; /* match resources.html */
+    color: #f5f5dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+    font-family: 'Caveat', cursive;
     z-index: 1000;
+    border-bottom: 2px solid #720026;
 }
 
-/* Sidebar */
+/* === Sidebar === */
 .sidebar {
     position: fixed;
-    top: 10vh; /* below header */
+    top: 60px;
     left: 0;
     width: 220px;
-    height: 90vh;
-    background-color: #001f3f; /* Dark navy */
-    border-right: 2px solid #f5f5dc; /* Beige outline */
-    border-radius: 0 10px 10px 0;
+    height: calc(100% - 60px);
+    background: #4F000B;
+    border-right: 2px solid #720026;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: width 0.3s;
-}
-
-/* Sidebar Links */
-.sidebar-links {
-    flex-grow: 1;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
 .sidebar-links a {
     display: flex;
     align-items: center;
-    color: #f5f5dc;
-    text-decoration: none;
     padding: 15px;
     margin: 5px 10px;
     border-radius: 8px;
+    text-decoration: none;
+    color: #f5f5dc;
     transition: background 0.3s;
 }
 
 .sidebar-links a:hover,
 .sidebar-links a.active {
-    background-color: #003366;
+    background: #720026;
 }
 
-/* Content */
+/* === Content === */
 .content {
     margin-left: 220px;
-    margin-top: 10vh;
+    margin-top: 60px;
     padding: 30px;
-    transition: margin-left 0.3s, background 0.3s, color 0.3s;
+    line-height: 1.5;
 }
 
-/* Headings inside content */
 .content h2 {
     margin-bottom: 15px;
 }
 
-/* Paragraphs */
 .content p {
     margin-bottom: 10px;
-    line-height: 1.5;
 }
